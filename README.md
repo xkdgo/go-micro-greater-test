@@ -5,7 +5,6 @@ An example Greeter application
 ## Contents
 
 - **srv** - an RPC greeter service
-- **cli** - an RPC client that calls the service once
 - **api** - examples of RPC API using GinGonic
 
 ## Etcd Registry
@@ -43,14 +42,7 @@ go run srv/main.go \
 --server_address=127.0.0.1:$SRV_PORT
 ```
 
-## Client
 
-Call go.micro.srv.greeter via client
-```shell
-go run cli/main.go
-```
-
-Examples of client usage via other languages can be found in the client directory.
 
 ## API
 
