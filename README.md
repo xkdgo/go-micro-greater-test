@@ -36,7 +36,7 @@ $ETCD_BIN/etcd \
 
 Start go.micro.srv.greeter
 ```shell
-export $SRV_PORT=XXXX # where XXXX youre desirable server port
+export SRV_PORT=XXXX # where XXXX youre desirable server port
 
 go run srv/main.go \
 -registry=etcd --registry_address=https://$IP_ADDR:2379 \
@@ -59,7 +59,7 @@ HTTP based requests can be made via GinGonic router
 Run the API Service
 ```shell
 export IP_ADDR="x.x.x.x" # where x.x.x.x is inet address of your server
-export $API_PORT=YYYY # where YYYY youre desirable server port
+export API_PORT=YYYY # where YYYY youre desirable server port
 
 go run api/main.go \
 --registry=etcd --registry_address=https://$IP_ADDR:2379 \
@@ -82,7 +82,7 @@ http://$IP_ADDR:$API_PORT/go.micro.srv.greeter/Say.Hello
 Call Say.Goodbye
 ```shell
 export IP_ADDR="x.x.x.x" # where x.x.x.x is inet address of your server
-export $API_PORT=YYYY # where YYYY youre desirable server port
+export API_PORT=YYYY # where YYYY youre desirable server port
 
 curl --header "Content-Type: application/json"  \
 -H "Accept: application/json" \
@@ -95,7 +95,7 @@ http://$IP_ADDR:$API_PORT/go.micro.srv.greeter/Say.Goodbye
 Show service nodes by name:
 ```shell
 export IP_ADDR="x.x.x.x" # where x.x.x.x is inet address of your server
-export $API_PORT=YYYY # where YYYY youre desirable server port
+export API_PORT=YYYY # where YYYY youre desirable server port
 
  curl "http://$IP_ADDR:$API_PORT/go.micro.srv.greeter/nodes"
  curl "http://$IP_ADDR:$API_PORT/api/nodes"
