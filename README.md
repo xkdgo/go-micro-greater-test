@@ -1,4 +1,4 @@
-# go-micro Greeter Example
+# go-micro Greeter Test Example
 
 An example Greeter application
 
